@@ -1,0 +1,19 @@
+import random
+
+def guess_the_number():
+    print("Welcome to my guess the number game! - It's skill based ;] - Also only input numbers; it breaks otherwise")
+    random_number = random.randint(1, 10)  # Generates a random integer between 1 and 10 (inclusive)
+
+    while True:
+        A = int(input("What do you think it is? "))
+
+        if A > random_number:
+            print("It's less than the number you inputted")
+        elif A < random_number:
+            print("Your number is greater than the number you inputted")
+        else:
+            print("Your number is correct!")
+            
+            break  # Exit the loop when the correct number is guessed
+
+guess_the_number()
